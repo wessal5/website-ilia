@@ -15,4 +15,14 @@
   font-size: 2.4rem;    /* sets the size of the text in rem units; 1rem = font size of root element */
   font-weight: bold;     /* makes the text bold */
   color: #FFC300;        /* sets the color of the text; in this case, a yellowish color */
+
 }
+  .fa-home{
+  position:fixed;
+  right:15px;
+  top:15px;
+  z-index:200;
+  text-decoration: none;
+  color: #FFC300;
+  font-weight: bold;
+  font-size: 25px;}
