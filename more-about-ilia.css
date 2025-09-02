@@ -4,7 +4,7 @@
   display:flex;
   align-items:center;
   justify-content:center;
-  margin-right: 15px;  /* moves the button 80% of the viewport width from the left edge of the screen */
+  right: 15px;  /* moves the button 80% of the viewport width from the left edge of the screen */
   background-color: #FFC300;  /* the background color of the button  */
   color: #522c74;           /* the color of the text inside the button */
   box-shadow: 1px 1px 5px rgba(211, 211, 211, 0.489); /* adds a shadow behind the button to give it depth; rgba allows partial transparency (a) */
@@ -28,6 +28,7 @@
   opacity: 0.7;             /* makes the button more transparent when clicked */
   transform: translateY(-4px); /* moves the button further up when clicked to give a pressed effect */
 }
+
 
 
 
