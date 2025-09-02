@@ -1,4 +1,5 @@
 body{
+    background:  url('./ChatGPT\ Image\ Aug\ 20\,\ 2025\,\ 03_25_50\ PM.png') no-repeat no-repeat center/cover;
     background-size: cover;
     background-attachment: fixed; 
     margin: 0; 
@@ -83,10 +84,7 @@ body{
     padding: 20px 4px;
     border-radius: 3px;
 }
-body{
-    background:  url('./ChatGPT\ Image\ Aug\ 20\,\ 2025\,\ 03_25_50\ PM.png') no-repeat no-repeat center/cover;
-    height: 1000px;
-}
+
 .side-bar{
     display: flex;
     flex-direction: column;
@@ -126,5 +124,6 @@ body{
 
     
     
+
 
 
