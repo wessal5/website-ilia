@@ -48,7 +48,7 @@
   margin-right: 8px;            
   margin-top: -3px; /* moves the logo slightly upward to align better; negative values pull up, positive values push down */
 }
- .fas{
+ body a .fas{
   position:fixed;
   right:5px;
   top:5px;
@@ -57,6 +57,7 @@
   color: #FFC300;
   font-weight: bold;
   font-size: 18px;}
+
 
 
 
