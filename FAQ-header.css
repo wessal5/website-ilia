@@ -4,7 +4,7 @@
   width: 100vw;    /* "vw" unit means how much of the viewport width the element covers; 100vw means full width of the screen */
   height: 16vh;    /* "vh" unit means how much of the viewport height the element covers; 16vh means 16% of the screen height */
   display: flex;   /* flexbox layout allows us to easily center and align content inside the header */
-  justify-content: space-between; 
+  justify-content: center; 
   align-items: center;     /* centers the content vertically inside the flex container */
   background-color: rgba(0, 0, 0, 0.4); /* semi-transparent black background; the 0.4 makes it partially see-through */
   z-index:1000;
@@ -18,10 +18,11 @@
 
 }
   .fa-home {
-  margin-right:
+  margin-right:80vw;
   text-decoration: none;
   color: #FFC300;
   font-weight: bold;
   font-size: 40px;}
+
 
 
