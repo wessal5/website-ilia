@@ -1,6 +1,6 @@
 
 *{
-    box-sizing: border-box; /* pour que rien soit a l'exterieur du container lors de la modification du padding*/
+    box-sizing: border-box;
     margin: 0;  
     padding: 0;
 }
@@ -218,6 +218,7 @@ footer p{
         transform: translateX(-20px);
     }
  }
+
 
 
 
