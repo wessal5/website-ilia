@@ -5,21 +5,12 @@
         <!-- CSS pour le style de la page -->
          <meta charset="UTF-8">
          <meta name="viewport" content="width=device-width, initial-scale=1" />
-
     <style>
         @media (max-width: 700px){
             body{
                 background-size: contain;
                 
             }
-        }
-        /* Définition de l'arrière-plan de la page */
-        body{
-            background:  url('./ChatGPT\ Image\ Aug\ 20\,\ 2025\,\ 03_25_50\ PM.png') no-repeat no-repeat center/cover;
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-
         }
         /* Style des titres principaux */
         .grand-titre{
@@ -64,6 +55,21 @@
             display:block;
             line-height: 23px;
         }
+        .image-background {
+            position: fixed; /* setting the position to fixed so that when we scroll, the image stays in place and doesn't move */
+            top: 0;          /* (top, right, bottom, left) set how far the element is from the edges of the screen */
+            right: 0;
+            z-index: -1;     /* controls which elements appear on top; negative means the image stays behind any element we add */
+            width: 100%;     /* percent unit sets width/height relative to the container; 100% means it fully covers the container */
+            height: 100%;
+            object-fit: cover; /* object-fit determines how the image fills the container; 'cover' resizes it to fully fit without distortion */
+            opacity: 0.9;    /* opacity varies from 0 to 1; 1 is fully visible, 0 is invisible, 0.9 is slightly transparent */
+}
+
+      .background {
+            width: 100%;    
+            height: 100%;   
+                  }
     </style>
     </head>
     <body>
@@ -85,6 +91,10 @@
         <!-- Liens vers le site officiel et le groupe WhatsApp -->
         <a class="link" href="http://www.ensaf.ac.ma/" target="_blank">➢ Visiter le site officiel de l'Ensaf</a>
         <a class="link" href="https://chat.whatsapp.com/BlJ8q3Sf8juIHmAK4GdsDl?mode=ems_share_c" target="_blank">➢ Rejoindre le groupe whatsapp du club CTGINC</a>
+           <!--setting the background of the page -->
+    <div class="background">
+      <img class="image-background" src="background.jpg">
+    </div>
     </body>
 
 </html>
