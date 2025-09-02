@@ -188,6 +188,9 @@ footer p{
 
 }
 @media (max-width:700px){
+     footer{
+        display:none;
+    }
     .menu-btn{
         display:block;
     }
@@ -223,10 +226,10 @@ footer p{
     .showcase h1{
     font-size: 60px;
     width:300px;
+    }
 }
-    footer{
-        display:none;
- }
+   
+
 
 
 
