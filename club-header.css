@@ -51,12 +51,13 @@
   .fa-home{
   position:fixed;
   right:5px;
-  top:5px;
+  top:8px;
   z-index:200;
   text-decoration: none;
   color: #FFC300;
   font-weight: bold;
-  font-size: 38px;}
+  font-size: 25px;}
+
 
 
 
