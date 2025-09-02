@@ -13,8 +13,9 @@
 
 .header h1 {
   font-size: 2.4rem;    /* sets the size of the text in rem units; 1rem = font size of root element */
-  margin-left:45%;
-  margin-right:45%;
+  position:absolute;
+  left:45%;
+  right:45%;
   font-weight: bold;     /* makes the text bold */
   color: #FFC300;        /* sets the color of the text; in this case, a yellowish color */
 
@@ -26,6 +27,7 @@
   font-weight: bold;
   font-size: 30px;
   flex:1;}
+
 
 
 
