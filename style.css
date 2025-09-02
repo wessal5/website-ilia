@@ -167,6 +167,9 @@ footer p{
 }
 
 @media (max-width:950px) {
+    footer{
+        display:none;
+    }
     .showcase img{
         display: none;
     }
@@ -229,6 +232,7 @@ footer p{
     }
 }
    
+
 
 
 
