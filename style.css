@@ -155,6 +155,7 @@ footer p{
      }
 .menu-btn i{
         color: #FFC300 ;
+        margin-top:35px;
 }
 @media (max-width:950px) {
     .showcase img{
@@ -194,6 +195,7 @@ footer p{
         transform: translateX(-20px);
     }
  }
+
 
 
 
