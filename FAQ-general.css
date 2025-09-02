@@ -1,5 +1,4 @@
-html{
-    scroll-behaviour:smooth;}
+
 body {
   margin: 0;          /* removes the default margin of the page so content starts at the very edge */
   margin-bottom:100px;
@@ -151,6 +150,7 @@ body .box label div {
     background-color: #FFC300; 
      }
   }
+
 
 
 
