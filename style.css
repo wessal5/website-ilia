@@ -59,6 +59,8 @@ a{
 header{
     margin-bottom:50px;
     width:100%;
+    margin:0;
+    
     
     
     
@@ -216,6 +218,7 @@ footer p{
         transform: translateX(-20px);
     }
  }
+
 
 
 
