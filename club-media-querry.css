@@ -1,0 +1,127 @@
+@media(max-width:800px){
+  body{
+    padding-bottom:80px;
+  }
+.header {
+  height: 15vh;    
+  align-items:center;
+  background-color: rgba(44, 2, 51, 1);
+}
+
+.hero-section {
+  display: flex;                
+  margin-top: 2px;              
+  margin-left: 10px;            
+}
+.club-acronym {
+  font-size: 24px;              
+}
+.club-name {
+  margin-top: 2px;              
+  font-size: 12px;              
+  width: 150px;                            
+}
+
+.slogan {
+  margin-top: 2px;
+  margin-left:4px;
+  font-size: 14px;              
+}
+
+.club-logo {
+  height: 64px;                 
+  border-radius: 6px;           
+  margin-right: 8px;            
+  margin-top: -3px; 
+}
+
+   .intro-note{
+   position:static;
+   margin:200px 10.5vw 0px 10.5vw;
+   position:static;
+   flex-direction:column;
+   width:auto;
+   height:auto;
+  }
+  .intro-note .intro{
+    font-size:0.8rem;
+    line-height:2;
+  }
+  .intro-note .intro .first-row{
+    font-size:17px;
+  }
+ .intro-note .Note{
+    font-size: 0.8rem;
+    line-height:2;
+  }
+  .intro-note .Note span{
+    font-size:17px;
+  }
+  .club-group {
+  font-size: 0.8rem;                  
+}
+  
+ .side-bar {
+  position: static;          
+  display: flex;             
+  flex-direction: column;    
+  align-items:center;
+  margin:50px 10.5vw 10px 10.5vw;
+  gap:25px; 
+
+}
+.gaming,
+.Dev-AI,
+.data-science {
+  display: flex;             
+  flex: 1;                   
+  font-size: 0.89em;           
+  height: 120px;             
+  width: 258px;              
+  background-color: rgba(0,0,0,0.4); 
+  border-radius: 27px 27px 27px 27px; 
+  transition: all 0.15s;   
+}
+  body .side-bar .row:hover { 
+  background-color: rgba(0,0,0,0.6); 
+}
+}
+@media((min-width:800px) and (max-width:1180px)){
+  .header {
+  height: 15vh;
+  justify-content:center; }  
+    .intro-note{
+    top:32vh;
+    left:40vw;
+    flex-direction:column;
+    gap:10px;
+    width:auto;
+    height:auto;
+  }
+  .intro{
+    font-size:0.9rem;
+  }
+  .intro .first-row{
+  font-size:1rem;
+  }
+  .Note{
+    margin-bottom:4px;
+    margin-right:-35px;
+    margin-left:35px;
+  }
+  .Note p{
+    font-size:0.9rem;
+  }
+  .Note span{
+    font-size:1rem;
+  }
+  .club-group{
+    font-size:0.9rem;
+  }
+  .side-bar{
+    top:18vh;
+  }
+
+
+
+}
