@@ -1,0 +1,51 @@
+.header {
+  position: fixed; /* keeps the header in place when scrolling */
+  top: 0;          /* distance from the top of the viewport / nearest positioned parent */
+  height: 17vh;    /* height of the header relative to viewport height */
+  width: 100vw;    /* full width of the viewport */
+  display: flex;   
+  flex-direction: column; /* stacks header content vertically */
+  align-items: center;    /* centers header content horizontally */
+  justify-content:start;
+  background-color: rgba(0, 0, 0, 0.4); /* semi-transparent black background */
+  z-index: 100;    /* ensures header stays above other elements(giving it more priority) */
+  padding-top: 2vh;   /* space inside header at the top */
+  padding-bottom: 1vh; /* space inside header at the bottom */
+}
+
+.hero-section {
+  display: flex;                
+  margin-top: 2px;              
+  margin-left: 20;            
+}
+.club-acronym {
+  font-size: 30px;              
+  color: #FFC300;               /* text color */
+  line-height: 25px;            /* spacing between lines of text */
+}
+
+.club-name {
+  margin-top: 2px;              
+  font-size: 16px;              
+  width: 250px;                 
+  line-height: 19px;            
+  color: #00E0FF;               
+}
+
+.slogan {
+  margin-top: 5px;             
+  margin-left: 15px;            
+  font-size: 18px;              
+  font-weight: 500;             
+  font-style: italic;           
+  display: block;               
+  font-family: 'Dancing Script', Poppins, Arial;  /* first tries 'Dancing Script' for style, if not available falls back the next,etc...*/
+  color: whitesmoke;           
+}
+
+.club-logo {
+  height: 70px;                 /* sets the height of the logo */
+  border-radius: 6px;           /* rounds the corners of the logo */
+  margin-right: 8px;            
+  margin-top: -3px; /* moves the logo slightly upward to align better; negative values pull up, positive values push down */
+}

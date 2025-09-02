@@ -1,0 +1,44 @@
+/*targetting the input that have "radio" type only */
+input[type="radio"] {
+  display: none; /* hides the radio buttons from the page so the user won't see them, but they still work for selecting options */
+}
+.box {
+  position: relative;  /* sets this box as a reference point for absolutely positioned elements inside it */
+}
+ /*targetting the div inside the label that is inside the "box"*/
+.box label div {
+  position: absolute;   /* positions this div relative to the .box container because .box has position: relative */
+  display: flex;        /* so its content (like an icon) can be centered */
+  justify-content: center; /* horizontally centers the content inside this div */
+  align-items: center; 
+  right: 1vw;     /* distance the div from the  edges of the .box container ( top/right/bottom/left) */
+  top:1.9vh;        
+  width:26px;          
+  height: 23.9px;         
+  border-radius: 30%;   /* rounds the corners of the div */
+  background-color: white; /* background-color of the div   */
+  cursor: pointer;      /* changes the mouse cursor to a hand icon when hovering over the div */
+  transition: all 0.15s ease; /* adds a smooth transition for hover and click effects */
+}
+/*this target the box label div only when the user hover over it*/
+.box label div:hover {
+  opacity: 0.85; /* makes the div slightly transparent */
+}
+/*this target the box label div only when the user clicks on it*/
+.box label div:active {
+  opacity: 0.7;         
+  transform: translateY(-2px); /* moves the div slightly upward (negative value) to create a pressed effect */
+}
+
+/* the following rules target the FAQ  when a specific radio button is checked by clicking on the its label  */
+#but-1:checked ~ .FAQ, /* the hash "#" refers to the radio button by its id (but-1) */
+#but-2:checked ~ .FAQ,/* the "~" means that what comes after is a sibling of the radio button (same parent and comes after it in HTML)*/
+#but-3:checked ~ .FAQ,
+#but-4:checked ~ .FAQ, 
+#but-5:checked ~ .FAQ,
+#but-6:checked ~ .FAQ,
+#but-7:checked ~ .FAQ, /*by using "," we can target all theses elements using one paragraph*/
+#but-8:checked ~ .FAQ {
+  height: auto;   /* lets the FAQ container expand to fit its content ( auto is the default for the height)*/
+  opacity: 0.9;  
+}

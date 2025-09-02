@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Club</title>
+    <!--setting the characters into normal UTF-8 style-->
+    <meta charset="UTF-8" />
+    <!--adjsuting the screen for other devices like phones-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <!-- Load Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!--importing css files-->
+    <link rel="stylesheet" href="club-header.css"> 
+    <link rel="stylesheet" href="website-background.css"> 
+    <link rel="stylesheet" href="activities-side-bar.css"> 
+    <link rel="stylesheet" href="intro.css"> 
+    <link rel="stylesheet" href="Note.css">
+    <link rel="stylesheet" href="club-general.css">
+  </head>
+  <body>
+    <!--setting the header bar of the page and adding its content -->
+         <header class="header">
+          <!-- Main header content -->
+          <div>
+            <div class="hero-section" >
+               <img class="club-logo" src="Club-logo.png" >
+              <div>
+             <p class="club-acronym">CTGINC</p>
+             <p class="club-name">CLUB TECH GAMING & INTELLIGENCE NUMÉRIQUE</p>
+              </div>
+          </div>
+          <p class="slogan">❝ Join the adventure, craft the impossible ! ❞</p>
+          </div>
+          </header>
+          <!-- Intro section that contains a small introduction about the club and its activities  -->
+          <div class="intro-note">
+            <div class="intro">
+            <!--using the span html element to modify the part of the whole text that is inside the span-->
+            <!-- to tap the "'" symbol i used the html entity "&#39;"-->
+            <p class="first-row">Bienvenue au CTGIN </p>
+            <p>Ici, on ne se contente pas d&#39;apprendre : <span>on joue, on analyse, on crée.</span> 
+            Du Gaming et de l&#39;Intelligence Numérique réunit des passionnés prêts à repousser leurs limites à travers <span>le gaming</span>, <span>la data science</span> et <span>le développement web & IA.</span></p>
+            <p>Que tu rêves de concevoir un jeu, d&#39;analyser des données ou de faire des projets web et IA innovants, le CTGIN est l&#39;endroit où tes idées deviennent réalité.</p>
+          </div>
+          <!-- Note section that contains some important info about the club -->
+          <div class="Note">
+            <p><span>Note:</span> Le club vient tout juste de voir le jour . La hiérarchie n&#39;est pas encore établie, et nous serons ravis d&#39;accueillir toutes les personnes motivées. Voici le lien du groupe WhatsApp, vous êtes les bienvenus 🤝  </p>
+            <div class="link-box">
+            <!-- importing the WhatsApp logo image to display before the group link -->
+            <img class="whatsapp-logo" src="whatsapp-logo.png">
+            <!-- link to whatsapp-group of the club (opens in new tab) -->
+            <a class="club-group" href="https://chat.whatsapp.com/BlJ8q3Sf8juIHmAK4GdsDl?mode=ems_share_c" target="_blank">
+            Accéder au groupe du club  
+            </a>
+            </div>
+          </div>
+        </div>
+              <!-- left side-bar (activities list) -->
+            <div class="side-bar">
+              <!-- Gaming section -->
+              <div class="gaming row">
+              <button><img class="activity-logo" src="joystick.png"></button> 
+              <p>Crée et joue à des jeux vidéo, du code au design. Participe à des Game Jams et hackathons.</p>
+              </div>
+              <!-- Dev-web & AI section -->
+              <div class="Dev-AI row">
+                <button><img class="activity-logo" src="web-dev.png"></button>
+                <p>Découvre l&#39;IA et ses applications : apprentissage automatique, réseaux neuronaux et projets innovants.</p>
+              </div>
+              <!--data-science section -->
+              <div class="data-science row">
+                <button><img class="activity-logo" src="data-science.png"></button>
+                <p>Analyse des données, construis des modèles et explore l&#39;IA pour résoudre des problèmes concrets.</p>
+              </div>
+            </div>
+            <!--the background of the page -->
+            <div class="background">
+                <img class="image-background" src="background.jpg">
+            </div>
+  </body>
+</html>

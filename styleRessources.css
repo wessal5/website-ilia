@@ -1,0 +1,123 @@
+.main h1 , p {
+    color: #FFC300;
+}
+.main p{
+    font-size: 30;
+}
+.main h1{
+    font-size: 40px;
+}
+.main {
+    width: 500px;
+    height: 500px;
+    margin-left: 100px;
+    margin-top: 60px;
+    
+}
+.actions .btn{
+    text-decoration: none;
+    color: #FFC300;
+    background-color: white;
+    padding: 4px 4px;
+    border-radius: 3px;
+    border-style: solid;
+    border-color: #FFC300;
+    cursor: pointer;
+    
+}
+.actions .btn:hover{
+    background-color: #FFC300;
+    color: white;
+    border-style: solid;
+    border-color: #FFC300;
+    transition: 0.5s;
+}
+.card{
+    display: flex;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    justify-content: space-between;
+    border-bottom:3px solid #FFC300 ;
+    
+}
+.list{
+    margin-top: 10px;
+    background-color: rgb(234, 230, 230);
+    padding: 20px 20px;
+    border-style: solid ;
+    border-color: #FFC300;
+    width: 780px;
+    height: 450px;
+}
+.card .title{
+    font-weight: bold;
+}
+.card:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
+.toolbar input{
+    height: 40px;
+    width: 600px;
+    margin-right: 20px;
+    cursor: pointer;
+    
+}
+.toolbar #themeFilter{
+    cursor: pointer;
+}
+.toolbar{
+    display: flex;
+    width: 1000px;
+    margin-bottom: 20px;
+}
+.uploader{
+    width: 820px;
+    background-color: #FFC300;
+    padding: 20px 4px;
+    border-radius: 3px;
+}
+body{
+    background:  url('./ChatGPT\ Image\ Aug\ 20\,\ 2025\,\ 03_25_50\ PM.png') no-repeat no-repeat center/cover;
+    height: 1000px;
+}
+.side-bar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    right: 150px;
+    top: 80px;
+    gap: 15px;
+    
+}
+.side-bar img{
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+.pass-next{
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #FFC300;
+    color: #fff;
+    font-size: 20px;
+    width: 100px;
+    margin-top: 30px;
+    padding-right: 3px;
+}
+@media (max-width: 640px) {
+      .toolbar { grid-template-columns: 1fr; }
+      .uploader { grid-template-columns: 1fr 1fr; }
+      .uploader button { grid-column: 1 / -1; }
+    }
+@media(max-width:1300px){
+    .side-bar{display: none;}
+}
+
+    
+    
+

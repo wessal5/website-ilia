@@ -1,0 +1,15 @@
+.image-background {
+   position: fixed; /* setting the position to fixed so that when we scroll, the image stays in place and doesn't move */
+   top: 0;          /* (top, right, bottom, left) set how far the element is from the edges of the screen */
+   right: 0;
+   z-index: -1;     /* controls which elements appear on top; negative means the image stays behind any element we add */
+   width: 100%;     /* percent unit sets width/height relative to the container; 100% means it fully covers the container */
+   height: 100%;
+   object-fit: cover; /* object-fit determines how the image fills the container; 'cover' resizes it to fully fit without distortion */
+   opacity: 0.9;    /* opacity varies from 0 to 1; 1 is fully visible, 0 is invisible, 0.9 is slightly transparent */
+}
+
+.background {
+   width: 100%;    
+   height: 100%;   
+}

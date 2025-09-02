@@ -1,0 +1,51 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Projet</title>
+</head>
+<body>
+    <!--Header-->
+     <div class="container">
+            <header>
+                <nav class="main-menu">
+                <img src="ILIA Logo with Circuit Design (1).png" alt="logo">
+                <ul class="right-menu">
+                    <li> <a href="pageRessources.html" target="_blank">Ressources</a></li>
+                    <li> <a href="club.html" target="_blank">Club</a></li>
+                    <li> <a href="Contact.html" target="_blank">Contact</a></li>
+                    <li> <a href="FAQ.html" target="_blank">FAQ</a></li>                    
+                    <li><a href="home.html"><i class="fas fa-Home"></i></a></li>
+                </ul>
+                
+                </nav>
+            </header>  
+
+    <!--Main-->
+            <main class="informations">
+                <section class="showcase">
+                    <h1>Welcome to ILIA</h1>
+                <a class="ilia-def">What is ILIA <i class="fas fa-chevron-right"></i></a>
+                <a href="pageRessources.html" target="_blank" class="button">LEARN MORE <i class="fas fa-chevron-right"></i></a>
+                <p class="def">La filière Génie Logicielle et Intelligence Artificielle forme des spécialistes capables de concevoir, développer et maintenir des logiciels fiables tout en maîtrisant 
+                    les méthodes et outils de l’intelligence artificielle pour créer des systèmes intelligents et innovants.</p>
+                  <img src="undraw_software-engineer_xv60.svg" class="illustration" alt="">
+                </section>
+            </main>
+    <!--footer-->
+            <footer>
+                <p>&copy;This website was created as the first project of ILIA's students .</p>
+
+            </footer>
+     <!--script-->       
+            <script>
+                document.querySelector('.ilia-def').addEventListener('click', 
+                () => document.querySelector('.def').classList.toggle('show'));
+            </script> 
+            
+
+    </div>
+</body>
+</html>

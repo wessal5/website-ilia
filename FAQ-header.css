@@ -1,0 +1,18 @@
+.header {
+  position: fixed; /* setting the position to fixed so that when we scroll, the header stays in place and doesn't move */
+  top: 0;          /* (top, right, bottom, left) set how far the element is from the edges of the screen */
+  width: 100vw;    /* "vw" unit means how much of the viewport width the element covers; 100vw means full width of the screen */
+  height: 16vh;    /* "vh" unit means how much of the viewport height the element covers; 16vh means 16% of the screen height */
+  display: flex;   /* flexbox layout allows us to easily center and align content inside the header */
+  justify-content: center; /* centers the content horizontally inside the flex container (here the flex-direction is row by default) */
+  align-items: center;     /* centers the content vertically inside the flex container */
+  background-color: rgba(0, 0, 0, 0.4); /* semi-transparent black background; the 0.4 makes it partially see-through */
+  z-index:1000;
+}
+
+
+.header h1 {
+  font-size: 2.4rem;    /* sets the size of the text in rem units; 1rem = font size of root element */
+  font-weight: bold;     /* makes the text bold */
+  color: #FFC300;        /* sets the color of the text; in this case, a yellowish color */
+}

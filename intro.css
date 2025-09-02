@@ -1,0 +1,25 @@
+.intro {              
+  color: #F5F5F5;               /* text color inside the intro box */
+  padding: 9px 15px;            /* space inside the box: top/bottom 9px, left/right 15px */
+  border: 1px solid white;      /* thin white border around the box */
+  border-radius: 27px 27px 0px 27px; /* rounded corners: top-left/top-right/bottom-right/bottom-left */
+  box-shadow: 1.5px 1.5px 12px gray; /* adds a shadow behind the box for depth */
+  background-color: #5A2D82;    /* dark purple background color */
+  line-height: 1.7;             /* spacing between lines of text */
+  font-size: 1rem;              /* the unit "rem" means the size of the root font */
+  display: flex;                
+  flex-direction: column;       /* stacks intro content vertically */
+  align-items: center;          /* centers intro content horizontally */
+}
+.intro span {
+  font-weight: 700;              /* makes the text bold */
+  text-decoration: underline;    /* adds underline to highlight important words */
+}
+.first-row {
+  margin-bottom: 9px;            /* space below the first row */
+  font-size: 20px;               /* slightly larger text for emphasis */
+  color: aquamarine;             /* bright color to make text stand out */
+  font-weight: 700;              /* bold text  (700 = bold)*/
+  font-style: italic;            /* italic style */
+  text-decoration: underline;    /* underline for extra emphasis */
+}

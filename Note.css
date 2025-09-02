@@ -1,0 +1,50 @@
+.Note span {
+  color: rgb(243, 174, 47);   /* text-color */
+  font-weight: bold;           /* makes the text bold */
+  font-size: 20px;             
+  display: block;              /* makes the span behave like a block element(it means to take all the line space)*/
+  font-style: italic;          /* italic style for style/emphasis */
+  text-decoration: underline;  /*underline to the text */
+}
+
+.Note {                  
+  border: 1px solid white;     /* thin white border around the contact box */
+  border-radius: 0px 27px 27px 27px; /* rounded corners: top-left/top-right/bottom-right/bottom-left */
+  padding: 16px 15px 25px 15px; /* inside spacing: top/right/bottom/left */
+  box-shadow: 2.5px 1px 10px gray; /* subtle shadow for depth */
+  background-color: #5A2D82;  /* dark purple background */
+  color: #EAEAEA;              /* text color inside the box */
+  line-height: 1.7;           /* spacing between lines of text */
+}
+
+.club-group {
+  margin: 18px 0 0 0;          /* space above the group, no extra on other sides */
+  font-size: 16px;           
+  color: rgb(255, 255, 255); 
+  text-decoration: solid;      /* solid style decoration (default for readability) */
+  background-color: rgba(38, 214, 103, 0.64); /* semi-transparent green background */
+  padding: 6px;                
+  border-radius: 12px;         
+}
+/*targetting club-group when hovering over it */
+.club-group:hover {
+  opacity: 0.9;                /* slightly transparent when hovered */
+}
+/*targetting club-group when clicking on it*/
+.club-group:active {
+  opacity: 0.7;                /* more transparent when clicked (active) */
+}
+
+.whatsapp-logo {
+  width: 31px;                
+  height: 31px;                
+  margin-bottom: -17px;        /* pulls the logo up slightly (negative-value:pull) */
+  margin-right: 5px;           /* space to the right of the logo (postive value:push) */
+}
+
+.link-box {
+  display: flex;               /* makes the box a flex container with a row defalut direction */
+  align-items: center;         /* vertically centers the content */
+  justify-content: center;     /* horizontally centers the content */
+}
+

@@ -1,0 +1,152 @@
+
+*{
+    box-sizing: border-box; /* pour que rien soit a l'exterieur du container lors de la modification du padding*/
+    margin: 0;  
+    padding: 0;
+}
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color: #000;
+    font-size: 15px;
+    line-height: 1.5;
+}
+a{
+        text-decoration: none;
+ }
+.container{
+    width: 90%;
+    height: 100%;
+    max-width: 1600px;
+    margin: auto;
+    background:  url('./ChatGPT\ Image\ Aug\ 20\,\ 2025\,\ 03_25_50\ PM.png') no-repeat no-repeat center/cover;
+    
+}
+.main-menu img{
+    width: 250px;
+    height: 150px;
+    object-fit: cover;
+
+}
+.main-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.3);
+
+    
+    
+}
+.main-menu ul{
+    display: flex;
+    list-style: none;
+}
+.right-menu li a{
+    margin-right: 60px;
+    text-decoration: none;
+    color: #FFC300;
+    font-weight: bold;
+    font-size: 18px;
+}
+.right-menu li a:hover{
+    border-bottom: 2px solid #FFC300 ;
+}
+header{
+    margin-bottom:50px;
+    
+}
+.showcase{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 120px;
+    position: relative;
+    
+}
+.showcase h1{
+    font-size: 80px;
+    margin-bottom: 20px;
+    width: 400px;
+    color: white;
+}
+.showcase .ilia-def{
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: white;
+    
+
+}
+.ilia-def:hover{
+    cursor: pointer;
+    opacity: 0.7;
+    transition: 0.5s;
+}
+
+.showcase .button:hover{
+    opacity: 0.8;
+    transition: 0.5s;
+}
+.showcase .button:active{
+    color: #FFC300;
+    background-color: white;
+    opacity: 1;
+}
+.button{
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #FFC300;
+    color: #fff;
+    font-size: 20px;
+    width: 195px;
+}
+
+.illustration{
+    width: 350px;
+    height: 350px;
+    position: absolute;
+    right: 70px;
+    bottom: -100px;
+}
+.def{
+    position: absolute;
+    width: 300px;
+    left: 350px;
+    top: 120px;
+    font-size: 18px;
+    background-color: rgba(250, 250, 250, 0.7);
+    color: #000;
+    padding: 18px;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateX(-50px); /*animate from here*/
+             /* avoid layout jump, works with transitions */
+    pointer-events: none;
+    /* animate both properties */
+    transition: opacity .5s ease-out, transform .5s ease-out;
+ }
+.def.show{
+    opacity: 1;
+    transform: translateX(0);     /* <-- animate to here */
+    visibility: visible;
+    pointer-events: auto;
+}
+main{
+    margin-bottom: 120px;
+}
+footer p{
+    color: white;
+    font-size:15px;
+    margin-left: 50px;    
+}
+@media (max-width:950px) {
+    .right-menu li{
+        display: none;
+    }
+    .showcase img{
+        display: none;
+    }
+}
+

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ILIA2</title>
+        <!-- CSS pour le style de la page -->
+         <meta charset="UTF-8">
+    <style>
+        @media (max-width: 700px){
+            body{
+                background-size: contain;
+                
+            }
+        }
+        /* Définition de l'arrière-plan de la page */
+        body{
+            background:  url('./img/ChatGPT\ Image\ Aug\ 20\,\ 2025\,\ 03_25_50\ PM.png') no-repeat no-repeat center/cover;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+        }
+        /* Style des titres principaux */
+        .grand-titre{
+            margin-left: 50px;
+            color: #FFC300;
+        }
+        /* Style des champs du formulaire */
+        .form{
+            font-family: Arial, Helvetica, sans-serif;
+            border-radius: 4px;
+            display:block;
+            margin-bottom: 15px;
+            margin-left: 100px;
+            width: 600px;
+            height: 30px;
+            font-size: 15px;
+            padding-left: 10px;
+            background-color: white;
+        }
+        /* Style du bouton d'envoi */
+        button{
+            background-color: rgb(255, 223, 0);
+            display:block;
+            margin-left: 100px;
+            width: 170px;
+            height: 40px;
+            font-size: 15px;
+            cursor: pointer;
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        /* Style de la carte Google Maps */
+        iframe{
+           margin-left: 100px;
+           border-radius: 30px; 
+        }
+        /* Style des liens */
+        .link{
+            color: rgb(220,220,200);
+            cursor: pointer;
+            margin-left: 100px;
+            display:block;
+            line-height: 23px;
+        }
+    </style>
+    </head>
+    <body>
+        <h1 class="grand-titre">📩 Contactez-nous</h1>
+         <!-- Formulaire de contact (envoi via formsubmit.co) -->
+        <form action="https://formsubmit.co/yasminaalamiaroussi@gmail.com" method="POST">
+            <input class="form" type="text" name="nom" placeholder="👤  Nom complet" required>
+            <input class="form" type="email" name="email" placeholder="📧 Email" required>
+            <textarea class="form" name="message" placeholder="💬 Votre message" required></textarea>
+            <!-- Désactivation du captcha -->
+            <input type="hidden" name="_captcha" value="false">
+            <!-- Bouton pour envoyer le formulaire -->
+            <button type="submit">Envoyer 📤</button>
+        </form>
+        <h1 class="grand-titre">📍 Localisation</h1>
+        <!-- Carte intégrée depuis Google Maps -->
+        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.8454143345493!2d-4.99187779999997!3d33.99650419999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd9f8b9a6b9ab9e1%3A0x64ee3e19ad13f28b!2sENSA%20%3A%20%C3%89cole%20Nationale%20des%20Sciences%20Appliqu%C3%A9es_F%C3%A8s!5e0!3m2!1sfr!2sma!4v1756486993598!5m2!1sfr!2sma"width="380" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h1 class="grand-titre">🌐 Suivez-nous</h1>
+        <!-- Liens vers le site officiel et le groupe WhatsApp -->
+        <a class="link" href="http://www.ensaf.ac.ma/" target="_blank">➢ Visiter le site officiel de l'Ensaf</a>
+        <a class="link" href="https://chat.whatsapp.com/BlJ8q3Sf8juIHmAK4GdsDl?mode=ems_share_c" target="_blank">➢ Rejoindre le groupe whatsapp du club CTGINC</a>
+    </body>
+</html>

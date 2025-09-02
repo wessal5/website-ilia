@@ -1,0 +1,29 @@
+.more-button {
+  position: absolute; /* setting the position to absolute so we can move the button freely relative to its nearest positioned parent */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-left: 80vw;  /* moves the button 80% of the viewport width from the left edge of the screen */
+  background-color: #FFC300;  /* the background color of the button  */
+  color: #522c74;           /* the color of the text inside the button */
+  box-shadow: 1px 1px 5px rgba(211, 211, 211, 0.489); /* adds a shadow behind the button to give it depth; rgba allows partial transparency (a) */
+  border: none;             /* removes the default border of the button */
+  border-radius: 25px;      /* rounds the corners of the button to make it look smooth */
+  padding: 1.4vh 1vw; 
+  text-decoration: dotted;  /* adds a dotted decoration on the text inside the button */
+  font-family: poppins;     /* sets the font type of the button text */
+  font-size: 1rem;          /* sets the size of the text; 1rem equals the font size of the root element */
+  font-weight: bold;        /* makes the text bold */
+  cursor: pointer;          /* changes the mouse pointer to a hand icon when hovering over the button */
+  transition: all 0.15s ease; /* adds a smooth transition for hover and active effects */
+}
+
+.more-button:hover {
+  opacity: 0.85;            /* makes the button slightly transparent when hovering */
+  transform: translateY(-2px); /* moves the button slightly up when hovering */
+}
+
+.more-button:active {
+  opacity: 0.7;             /* makes the button more transparent when clicked */
+  transform: translateY(-4px); /* moves the button further up when clicked to give a pressed effect */
+}

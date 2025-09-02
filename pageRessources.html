@@ -1,0 +1,250 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleRessources.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>Ressources-ILIA</title>
+</head>
+<body>
+    <div class="main">
+      <div class="Ressources">
+        <h1>Page Ressources</h1>
+        <p> Documents List</p>
+        <!--Search and filter-->
+        <div class="toolbar">
+            <input type="Search" id="searchInput" placeholder="Search a document ( title , theme ...)">
+            <select id="themeFilter">
+                <option value="">-Filter by theme / subject ...-</option>
+            </select>
+        </div>
+        <!--Upload-->
+        <div class="uploader">
+            <input type="file" id="fileInput" >
+            <select  id="themeSelect">
+                <option value="">-Choose a Theme</option>
+                <option value="Architecture">Architecture </option>
+                <option value="Programmation">Programmation</option>
+                <option value="Systèmes et Réseaux">Systèmes et Réseaux </option>
+                <option value="Statistiques & Probabilités">Statistiques & Probabilités</option>
+                <option value="Compétences numériques">Compétences numériques</option>
+                <option value="Communication et langues">Communication et langues</option>
+                </select>
+            <button  id="addBtn">Add File</button>
+        </div>
+        <div id="list" class="list"></div>
+        <p id="emptyState" class="empty" style="display:none;">No documents match your search/filter.</p>
+      </div>
+        <div class="side-bar">
+          <img src="HTML5_logo_and_wordmark.svg.png" alt="">
+          <img src="Javascript-736400_960_720.png" alt="">
+          <img src="919826.png" alt="">
+          <a href="Club.html" target="_blank" class="Pass-next">NEXT <i class="fas fa-chevron-right"></i></a>
+        </div>
+    </div>
+    <!--Script-->
+    <script>
+          const seed = [                  //Array
+      {
+        id: crypto.randomUUID(),       //create a unique identifier for each document
+        title: "Cours HTML",
+        theme: "Programmation",
+        size: "2 MB",
+        href: "1- dev. web_html partie 1.pdf",
+        filename: "Cours_HTML.pdf"
+      },
+      {
+        id: crypto.randomUUID(), //crypto = JavaScript’s secure cryptography API. crypto.randomUUID() = generates a unique identifier string.
+        title: "Cours Java-script",
+        theme: "Programmation",
+        size: "708 KB",
+        href: "Cours_Javascript.pdf",
+        filename: "Cours_Java-Script.pdf"
+      },
+      {
+        id: crypto.randomUUID(),
+        title: "Java",
+        theme: "Programmation",
+        size: "6 MB",
+        href: "Résumé JAVA.docx",
+        filename: "Java.pdf"
+      },
+      {
+        id: crypto.randomUUID(),
+        title: "Architecture des proceccus",
+        theme: "Architecture",
+        size: "2 MB",
+        href: "Cous PIC.pdf",
+        filename: "Architecture des proceccus.pdf"
+      },
+      {
+        id: crypto.randomUUID(),
+        title: "Cours Probabilités",
+        theme: "Statistiques & Probabilités",
+        size: "22 MB",
+        href: "probabilité-cours complet.pdf",
+        filename: "Probabilités.pdf"
+      },
+       {
+        id: crypto.randomUUID(),
+        title: "Cours Statistiques descriptives",
+        theme: "Statistiques & Probabilités",
+        size: "529 KB",
+        href: "Statistiques Descriptives Polycopié.pdf",
+        filename: "Statistiques.pdf"
+      },
+       {
+        id: crypto.randomUUID(),
+        title: "Cours Resaux",
+        theme: "Systèmes et Réseaux",
+        size: "9 MB",
+        href: "Chapitre 1  Généralités sur la réseautique 2024.pdf",
+        filename: "Réseaux.zip"
+      }
+    ];
+    const state = {   //the memory  
+      resources: [...seed], //ressources is an array , we copied seed in ressources
+      search: "",//store the current search text from the search bar 
+      theme: "" // store the current theme filter chosen in the dropdown.
+    };
+    //DOM : get elements from html
+    const listEl = document.getElementById("list");                
+    const emptyEl = document.getElementById("emptyState");
+    const searchInput = document.getElementById("searchInput");
+    const themeFilter = document.getElementById("themeFilter");
+    const fileInput = document.getElementById("fileInput");
+    const themeSelect = document.getElementById("themeSelect");
+    const addBtn = document.getElementById("addBtn");
+    //conversion bytes vers KB et MGB
+     function formatBytes(bytes)  {    
+      if (bytes === 0 || bytes === undefined) return "";  //no size
+      const kb = bytes / 1024;  //convert the bytes to kb 
+      if (kb < 1024) return `${Math.round(kb)} KB`; //math round = partie entiere  ( exp : 4.3->4)
+      return `${(kb / 1024).toFixed(1)} MB`; //If size is at least 1024 KB, then convert to MB. toFixed(1) => shows only one number after ","
+    }
+
+    function refreshThemeFilter() {
+      const themes = Array.from(new Set(state.resources.map(r => r.theme).filter(Boolean))).sort(); //themes is an array contains only the themes
+      /*
+      state.ressources.map(r=>r.theme) : Get all themes from resources(we copied our array in our ressources by state )
+      state.ressources : my array of objects 
+      map(r=>r.theme):extract the theme property from each object. (r is an object)
+      filter(boolen): remove empty values : only real themes stay in the list 
+      new Set : remove duplicates
+      Array.from(new Set(...)).sort() : Convert the themes back to array + sort alphabetically
+      */
+      
+      themeFilter.innerHTML = '<option value="">— Filter by subject / theme —</option>'; //reset the dropdown
+      themes.forEach(t => {                               //loops through each item in themes array that we extracted earlier
+        const opt = document.createElement("option");  //create a new option
+        opt.value = t;  //Sets the value of this <option> to the theme.
+        opt.textContent = t; //Sets the text of this <option> to the theme.
+        themeFilter.appendChild(opt); //appendchild : add element(node) as the last child
+      });
+      
+      if (state.theme) themeFilter.value = state.theme;     /*
+                        If the user already selected a theme filter (stored in state.theme),
+                        set the dropdown back to that value.*/
+    }
+    //filter search and theme
+    function getFiltered() {
+      const q = state.search.trim().toLowerCase(); // trim : removes extra spaces , .toLowerCase() makes it lowercase (so the search is case-insensitive).
+      return state.resources.filter(r => { //.filter(...) loops through each resource (r) and only keeps the ones that match conditions.
+        const matchesText = !q || r.title.toLowerCase().includes(q) || (r.theme || "").toLowerCase().includes(q);
+        /*If no search (!q) → everything matches.
+        Else → keep the resource if: Its title includes the search word. OR its theme includes the search word.*/
+        const matchesTheme = !state.theme || r.theme === state.theme; //Theme filter ( state.theme is what the user has chosen)
+        return matchesText && matchesTheme;
+      });
+    }
+    //render the list
+    function render() {
+      const items = getFiltered(); //getfiltered applies the search/theme filter
+      listEl.innerHTML = ""; //reset the list container
+
+      if (items.length === 0) {           //no matches
+        emptyEl.style.display = "block"; //display "Aucun document ne correspond à votre recherche/filtre."
+        return;
+      }
+      emptyEl.style.display = "none";   //otherwise hide that message 
+
+      items.forEach(r => {                   //loop for each object
+        const card = document.createElement("div");   //create a container for one document
+        card.className = "card";       //each ressource will be inside its container
+
+        const info = document.createElement("div");  //create a container for info
+        const title = document.createElement("div");  //create a container for the title
+        title.className = "title";     //add a class name
+        title.textContent = ` ${r.title}`;   
+        const meta = document.createElement("div");  //a container for theme and size
+        meta.className = "meta";   //add a class name
+        meta.innerHTML = `
+          Thème : <span class="tag">${r.theme || "—"}</span>
+          ${r.size ? ` • Taille : ${r.size}` : ""}
+        `;
+        info.appendChild(title);
+        info.appendChild(meta);
+
+        const actions = document.createElement("div");   //create a container for the actions(telecharger)
+        actions.className = "actions"; //add a class name
+
+        // Lien "Télécharger" — utilise l'attribut download
+        const dl = document.createElement("a");  //create a link as a download boutton
+        dl.className = "btn";
+        dl.href = r.href;
+        dl.download = r.filename || r.title || "file";
+        dl.textContent = "Download";
+        actions.appendChild(dl); //add dl to actions
+
+        card.appendChild(info);      //put info inside card
+        card.appendChild(actions);
+        listEl.appendChild(card);
+      });
+    }
+    searchInput.addEventListener("input", (e) => { //attaches a listener for the input event. whenever u add , delete ....
+      state.search = e.target.value; //save the current text in the search box in state 
+      render(); //re-render the list 
+    });
+
+    themeFilter.addEventListener("change", (e) => {   //runs the funtcion when a selection is changed , whenever u change a selection
+      state.theme = e.target.value; //save the current theme in state
+      render();
+    });
+     addBtn.addEventListener("click",  () => {   //runs the function a when we click the button
+      const file = fileInput.files[0];   //.files is a file list . files[0] is the first file selected
+      if (!file) {
+        alert("choose a file to add."); //if no file chosen alert this message
+        return;
+      }
+      if (!themeSelect.value) {
+        alert("Choose a theme for this File.");  //if no theme selected alert this message
+        return;
+      }
+
+      
+      const objectURL = URL.createObjectURL(file);
+
+      
+      state.resources.unshift({         //we add the new document on top (unshift)
+        id: crypto.randomUUID(),   //create a unique identifier
+        title: file.name.replace(/\.[^/.]+$/, ""), // titre = nom du fichier sans extension , by replace we remove the extensions
+        theme: themeSelect.value,
+        size: formatBytes(file.size),
+        href: objectURL,             // lien de "téléchargement" (local)
+        filename: file.name          // nom proposé lors du download
+      });
+
+      // Resetting the fields
+      fileInput.value = "";
+      themeSelect.value = "";
+      refreshThemeFilter();
+      render();
+    });
+    // Initialization
+    refreshThemeFilter();
+    render();
+
+    </script>
+      
+</body>
+</html>

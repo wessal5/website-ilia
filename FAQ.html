@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FAQ</title>
+    <!--setting the characters into normal UTF-8 style-->
+    <meta charset="UTF-8" />
+    <!--adjusting the screen for other devices like phones-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+     <!-- Load Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <!--importing css files-->
+    <link rel="stylesheet" href="website-background.css" >
+    <link rel="stylesheet" href="FAQ-header.css">
+    <link rel="stylesheet" href="more-about-ilia.css">
+    <link rel="stylesheet" href="FAQ-general.css">
+    <link rel="stylesheet" href="plus-icon.css">
+    <link rel="stylesheet" href="FAQ-box.css">
+  </head>
+  <body>
+    
+    <!--setting the header bar of the page and adding the content (the title and "know more about ILIA" button)-->
+    <div class="header">
+      <h1>FAQ</h1>
+     <!-- link to PDF (opens in new tab) -->
+      <a class="more-button" href="https://docs.ensaf.ac.ma/home/fil/ILIAV2.pdf" target="_blank">
+        plus sur ILIA
+      </a>
+    </div>
+    <!--setting the structure of the page-main content -->
+    <div class="global-container">
+      <!--adding into the global-container  two alike sections with the same class -->
+      <!--first section-->
+      <div class="section">
+      <!--the section contains 4 alike horizontal-boxes-->
+        <div class="box">
+          <!--using radio type input to create plus-buttons-->
+          <!--using the same name "Questions" for all boxes so that only one plus-sign can be checked at time-->
+          <input type="radio" id="but-1" name="Questions" />
+          <!--labeling the radio-circles into  plus-buttons to tie them both, so that they have the same behavior-->
+          <label for="but-1"><div>+</div></label>
+          <!--creating the box containing the questions and answers-->
+          <!--it must be after the radio inputs so that we can later use the general-sibling-selector "~"-->
+          <div class="FAQ">
+            <!--the first sub-box of the FAQ box is the questions-box-->
+            <div class="question-box">
+              <!--the questions-box contains the question-number-icon and the question-->
+              <div class="number-icon">
+                  1
+              </div>
+              <div class="question">
+                 <p>Combien de temps dure la formation ?</p>
+              </div>
+            </div>
+            <!--the second sub-box of the FAQ box is the answers-box-->
+            <div class="answer">
+              <!--i used a serie of the dash "_" to create a line separating between the questions-box and the answer-->
+              <!--using the span html element to modify the part of the whole text that is inside the span-->
+              <p class="line">____________________________________________________</p>
+              <!-- to tap the "'" symbol i used the html entity "&#39;"-->
+              <p>La formation s&#39;étale sur 3 ans (6 semestres) avec un total de 35 modules.</p>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <input type="radio" id="but-2" name="Questions" />
+          <label for="but-2"><div>+</div></label>
+          <div class="FAQ">
+            <div class="question-box">
+              <div class="number-icon">
+                  2
+              </div>
+              <div class="question">
+                <p>Quels types de cours sont enseignés ?</p>
+              </div>
+            </div>
+            <div class="answer">
+              <p class="line">____________________________________________________</p>
+               <p> Les étudiants suivent des modules de spécialité (IA, développement logiciel, big data…), des power skills (gestion de projets, développement personnel), ainsi que des modules de langues (anglais et français techniques).</p>
+            </div>
+          </div>
+        </div>
+        <!-- the same process for all the rest of the boxes -->
+        <div class="box">
+          <input type="radio" id="but-3" name="Questions" />
+          <label for="but-3"><div>+</div></label>
+          <div class="FAQ">
+            <div class="question-box">
+              <div class="number-icon">
+                  3
+              </div>
+              <div class="question">
+                <p>Y a-t-il des stages obligatoires ?</p>
+              </div>
+            </div>
+            <div class="answer">
+              <p class="line">____________________________________________________</p>
+              <p> Oui, trois stages :</p>
+              <P>- Stage d&#39;initiation en 1ère année,</P> 
+
+                <p>- Stage d&#39;application en 2ème année,</p>
+
+                <p>- Projet de Fin d&#39;Études (PFE) en 3ème année.</p>
+            </div>
+          </div>
+          </div>
+          <div class="box">
+          <input type="radio" id="but-4" name="Questions" />
+          <label for="but-4"><div>+</div></label>
+            <div class="FAQ">
+              <div class="question-box">
+              <div class="number-icon">
+                  4
+              </div>
+                <div class="question">
+                  <p>Quelles compétences vais-je acquérir ?</p>
+                </div>
+              </div>
+              <div class="answer">
+                <p class="line">____________________________________________________</p>
+            <p> Vous développerez des compétences en programmation, bases de données, méthodologies agiles, intelligence artificielle avancée, ainsi qu&#39;en communication et travail en équipe.</p>
+              </div>
+            </div>
+          </div>
+      </div>
+      <!--second section-->
+      <div class="section">
+        <div class="box">
+        <input type="radio" id="but-5" name="Questions" />
+        <label for="but-5"><div>+</div></label>
+          <div class="FAQ">
+            <div class="question-box">
+              <div class="number-icon">
+                  5
+              </div>
+              <div class="question">
+                <p>Quels sont les débouchés après la filière ?</p>
+              </div>
+            </div>
+            <div class="answer">
+             <p class="line">____________________________________________________</p>
+           <p> Les diplômés peuvent devenir ingénieur en intelligence artificielle, développeur logiciel, data scientist, architecte logiciel, ingénieur DevOps, responsable cybersécurité, ou encore entreprendre dans les technologies.</p>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <input type="radio" id="but-6" name="Questions" />
+          <label for="but-6"><div>+</div></label>
+          <div class="FAQ">
+            <div class="question-box">
+              <div class="number-icon">
+                  6
+              </div>
+              <div class="question">
+                <p>La filière est-elle tournée vers la pratique ?</p>
+              </div>
+            </div>
+            <div class="answer">
+              <p class="line">____________________________________________________</p>
+          <p> Oui, en plus des cours théoriques, la formation inclut des projets, stages et travaux pratiques qui préparent directement au monde professionnel.</p>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <input type="radio" id="but-7" name="Questions" />
+          <label for="but-7"><div>+</div></label>
+          <div class="FAQ">
+            <div class="question-box">
+              <div class="number-icon">
+                  7
+              </div>
+              <div class="question">
+                <p>Quels langages et technologies sont enseignés ?</p>
+              </div>
+            </div>
+            <div class="answer">
+              <p class="line">____________________________________________________</p>
+          <p> Python, Java, C, ainsi que des frameworks modernes (React, Spring, TensorFlow, PyTorch, Docker, Kubernetes, etc.).</p>
+            </div>
+          </div>
+        </div>
+        <div class="box">
+          <input type="radio" id="but-8" name="Questions" />
+          <label for="but-8"><div>+</div></label>
+          <div class="FAQ">
+            <div class="question-box">
+              <div class="number-icon">
+                  8
+              </div>
+              <div class="question">
+                <p>La formation est-elle ouverte à l&#39;international ?</p>
+              </div>
+            </div>
+            <div class="answer">
+              <p class="line">____________________________________________________</p>
+          <p> Oui, avec l&#39;accent mis sur l&#39;anglais technique et les compétences multiculturelles, les étudiants sont préparés à évoluer dans des environnements internationaux.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--setting the background of the page -->
+    <div class="background">
+      <img class="image-background" src="background.jpg">
+    </div>
+  </body>
+</html>
