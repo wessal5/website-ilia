@@ -1,5 +1,6 @@
 .more-button {
   position: absolute; /* setting the position to absolute so we can move the button freely relative to its nearest positioned parent */
+  flex:1;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -27,3 +28,4 @@
   opacity: 0.7;             /* makes the button more transparent when clicked */
   transform: translateY(-4px); /* moves the button further up when clicked to give a pressed effect */
 }
+
