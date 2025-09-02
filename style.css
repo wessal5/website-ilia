@@ -37,7 +37,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.3);
+    
 
     
     
@@ -60,6 +60,7 @@ header{
     margin-bottom:50px;
     width:100%;
     margin:0;
+    background-color: rgba(0, 0, 0, 0.3);
     
     
     
@@ -218,6 +219,7 @@ footer p{
         transform: translateX(-20px);
     }
  }
+
 
 
 
