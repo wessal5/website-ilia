@@ -1,5 +1,4 @@
-html{
-    scroll-behaviour:smooth;}
+
 body {
   margin: 0;                     /* removes the default space outside the body */
   padding: 0;                    /* removes the default space inside the body */
@@ -145,5 +144,6 @@ p {
 
 
 }
+
 
 
