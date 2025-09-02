@@ -49,10 +49,11 @@
   margin-right: 8px;            
   margin-top: -3px; /* moves the logo slightly upward to align better; negative values pull up, positive values push down */
 }
-.header a{
+.header .fas{
     margin-right: 30px;
     text-decoration: none;
     color: #FFC300;
     font-weight: bold;
     font-size: 18px;}
+
 
