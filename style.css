@@ -10,6 +10,7 @@ body{
     color: #000;
     font-size: 15px;
     line-height: 1.5;
+    background:  url('./ChatGPT\ Image\ Aug\ 20\,\ 2025\,\ 03_25_50\ PM.png') no-repeat no-repeat center/cover;
 }
 a{
         text-decoration: none;
@@ -19,7 +20,7 @@ a{
     height: 100%;
     max-width: 1600px;
     margin: auto;
-    background:  url('./ChatGPT\ Image\ Aug\ 20\,\ 2025\,\ 03_25_50\ PM.png') no-repeat no-repeat center/cover;
+    
     
 }
 .main-menu img{
@@ -149,4 +150,5 @@ footer p{
         display: none;
     }
 }
+
 
