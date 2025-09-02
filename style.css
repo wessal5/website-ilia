@@ -4,6 +4,8 @@
     margin: 0;  
     padding: 0;
 }
+html{
+    scroll-behaviour:smooth;}
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #fff;
@@ -219,6 +221,7 @@ footer p{
         transform: translateX(-20px);
     }
  }
+
 
 
 
