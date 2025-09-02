@@ -113,6 +113,15 @@ body{
     margin-top: 30px;
     padding-right: 3px;
 }
+.home i{
+    margin-right: 15px;
+    color: #FFC300;
+}
+.home{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 @media (max-width: 640px) {
       .toolbar { grid-template-columns: 1fr; }
       .uploader { grid-template-columns: 1fr 1fr; }
@@ -124,6 +133,7 @@ body{
 
     
     
+
 
 
 
