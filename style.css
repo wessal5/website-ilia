@@ -170,7 +170,7 @@ footer p{
     }
     main.informations {
     margin: 0;              
-    padding-left: 16px;     
+    padding-left: 14px;     
     width: 100%;
     }
 
@@ -218,6 +218,7 @@ footer p{
         transform: translateX(-20px);
     }
  }
+
 
 
 
