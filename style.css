@@ -11,7 +11,7 @@ body{
     color: #000;
     font-size: 15px;
     line-height: 1.5;
-    background:  url('./ChatGPT\ Image\ Aug\ 20\,\ 2025\,\ 03_25_50\ PM.png') no-repeat no-repeat center/cover;
+    background:  url('./background.jpg') no-repeat no-repeat center/cover;
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
@@ -221,6 +221,7 @@ footer p{
         transform: translateX(-20px);
     }
  }
+
 
 
 
