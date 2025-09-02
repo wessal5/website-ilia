@@ -220,7 +220,12 @@ footer p{
     .main-menu ul.right-menu.show{
         transform: translateX(-20px);
     }
+    .showcase h1{
+    font-size: 70px;
+    
+}
  }
+
 
 
 
