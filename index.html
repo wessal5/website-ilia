@@ -8,6 +8,9 @@
 </head>
 <body>
     <!--Header-->
+    <div class="menu-btn">
+        <i class="fas fa-bars fa-2x"></i>
+    </div>
      <header>
                 <nav class="main-menu">
                 <img src="ILIA Logo with Circuit Design (1).png" alt="logo">
@@ -44,11 +47,13 @@
             <script>
                 document.querySelector('.ilia-def').addEventListener('click', 
                 () => document.querySelector('.def').classList.toggle('show'));
+                document.querySelector('.menu-btn').addEventListener('click', () => document.querySelector('.right-menu').classList.toggle('show'));
             </script> 
             
 
     </div>
 </body>
 </html>
+
 
 
